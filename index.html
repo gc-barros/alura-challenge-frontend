@@ -60,8 +60,7 @@ const unfold = (f, seed) => {
         return res ? go(f, res[1], acc.concat([res[0]])) : acc
     }
     return go(f, seed, [])
-}
-                </textarea>
+}</textarea>
             </div>
 
             <button class="botao editor__botao--highlight">Visualizar com o highlight</button>
@@ -77,10 +76,11 @@ const unfold = (f, seed) => {
                 <h3 class="titulo">PERSONALIZAÇÃO</h3>
                 <select class="input select">
                     <option value="Javascript" selected>Javascript</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
                     <option value="Python">Python</option>
                     <option value="Java">Java</option>
                     <option value="C">C</option>
-                    <option value="C++">C++</option>
                 </select>
                 <input type="color" name="" id="" class="input" value="#6BD1FF">
             </div>

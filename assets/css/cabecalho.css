@@ -171,10 +171,10 @@
    
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) {
 
     .cabecalho {
-        grid-template-columns: 1fr 752px 1fr;
+        grid-template-columns: 20% 48% 24%;
     }
 
     .cabecalho__botao--menu {
@@ -212,6 +212,12 @@
         border-bottom: none;
     }
 
+}
+
+@media screen and (min-width: 1440px) {
+    .cabecalho {
+        grid-template-columns: 1fr 752px 1fr;
+    }
 }
 
 
