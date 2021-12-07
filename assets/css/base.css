@@ -1,0 +1,89 @@
+@import url(../../assets/css/reset.css);
+@import url(../../assets/css/normalize.css);
+
+:root {
+    --dark-blue: #051D3B;
+    --white: #FFFFFF;
+
+    --inter: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    font-family: var(--inter);
+}
+
+.titulo {
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.botao {
+    height: 56px;
+    border-radius: 8px;
+    background: #5081FB14;
+    font-size: 16px;
+    color: var(--white);
+    border: none;
+    width: 100%;
+    margin-top: 32px;
+    cursor: pointer;
+    transition: .2s ease-in all;
+}
+
+.botao:hover {
+    background-color: #5081FB29;
+}
+
+.input {
+    background-color: #2D415A; 
+    color: var(--white);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 16px 14px;
+    height: 56px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: .3s ease-in all;
+    margin-top: 16px;
+}
+
+.input:hover, .input:focus {
+    background-color: #41536A;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.64);
+}
+
+.input--descricao {
+    height: 80px;
+}
+
+.select {
+    cursor: pointer;
+}
+
+input[type="color"] {
+	background-color: transparent;
+    border: 1px solid #FFFFFF;
+    padding: 8px;
+    cursor: pointer;
+    margin-top: 24px;
+}
+
+input[type="color"]:hover, input[type="color"]:focus {
+    background-color: #ffffff27;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+    border-radius: 4px;
+	border: none;
+}

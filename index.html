@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura DEV | Editor de código</title>
+    <!-- Tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/cabecalho.css">
+    <link rel="stylesheet" href="assets/css/editor.css">
+    <link rel="stylesheet" href="assets/css/formulario.css">
+</head>
+<body>
+     <header class="cabecalho">
+        <h1 class="cabecalho__logo" data-logo>
+            <img src="assets/img/logo.svg" alt="Logo da Alura DEV">
+        </h1>
+        <input type="search" class="input cabecalho__busca" name="Barra de pesquisa" placeholder="Busque por algo" data-search-input>
+        <button class="cabecalho__botao cabecalho__botao--lupa" aria-label="Abrir barra de pesquisa" data-search-button></button>
+        <button class="cabecalho__botao cabecalho__botao--menu" aria-label="Abrir menu lateral" data-menu-button></button>
+        
+        <div class="cabecalho__user cabecalho__user--principal ">
+            <img src="assets/img/user.png" alt="Foto do usuário" class="cabecalho__userpic">
+            <span class="cabecalho__username">Gabriel</span>
+        </div>
+     </header>
+
+     <main class="principal">
+        <nav class="cabecalho__menu" data-menu-lateral>
+            <h2 class="titulo">MENU</h2>
+            <ul class="cabecalho__menu-itens">
+                <li class="cabecalho__menu-item cabecalho__menu-item--editor">
+                    <a href="#" class="cabecalho__menu-link">Editor de código</a>
+                </li>
+                <li class="cabecalho__menu-item cabecalho__menu-item--comunidade">
+                    <a href="#" class="cabecalho__menu-link">Comunidade</a>
+                </li>
+            </ul>
+            <div class="cabecalho__user cabecalho__user--menu">
+                <img src="assets/img/user.png" alt="Foto do usuário" class="cabecalho__userpic">
+                <span class="cabecalho__username">Gabriel</span>
+            </div>
+        </nav>
+        <section class="editor">
+            <div class="editor__template">
+                <textarea class="editor__codigo" spellcheck="false">
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+
+const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+        const res = f(seed)
+        return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+}
+                </textarea>
+            </div>
+
+            <button class="botao editor__botao--highlight">Visualizar com o highlight</button>
+        </section>
+        
+        <form class="formulario">
+            <div class="formulario__projeto">
+                <h3 class="titulo">SEU PROJETO</h3>
+                <input type="text" name="Nome" placeholder="Nome do seu projeto" class="input">
+                <textarea class="input input--descricao" placeholder="Descrição do seu projeto"></textarea>
+            </div>
+            <div class="formulario__personalizacao">
+                <h3 class="titulo">PERSONALIZAÇÃO</h3>
+                <select class="input select">
+                    <option value="Javascript" selected>Javascript</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                </select>
+                <input type="color" name="" id="" class="input" value="#6BD1FF">
+            </div>
+            <button class="botao formulario__botao">Salvar projeto</button>
+        </form>
+        
+     </main>
+
+     <script type="module" src="assets/js/index.js"></script>
+</body>
+</html>

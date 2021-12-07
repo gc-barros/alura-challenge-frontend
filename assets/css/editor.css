@@ -1,0 +1,76 @@
+@media screen and (min-width: 0) {
+
+    .principal {
+        padding: 24px 16px;
+    }
+    
+    .editor__template {
+        display: flex;
+        background-color: #6BD1FF;
+        border-radius: 8px;
+        padding: 32px;
+        position: relative;
+    }
+
+    .editor__codigo {
+        box-sizing: border-box;
+        display: block;
+        font-size: 14px;
+        padding: 52px 16px 16px 16px;
+        background-color: #141414;
+        color: var(--white);
+        resize: vertical;
+        height: 470px;
+        width: 100%;
+        border-radius: 8px;
+        font-family: 'Roboto Mono', monospace;
+        border: none;
+        outline: none;
+        box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
+        -moz-tab-size: 4;
+        tab-size: 4;
+    }   
+
+    ::-webkit-resizer {
+        -webkit-appearance: none;
+    }
+
+    .editor__template::before {
+        content: url(../../assets/img/mac_buttons.svg);
+        margin-left: 16px;
+        margin-top: 16px;
+        position: absolute;
+        background-color: #141414;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .principal {
+        padding: 8px 32px;
+    }
+
+    .editor__codigo {
+        height: 302px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    
+    .principal {
+        display: grid;
+        grid-template-columns: 1fr 752px 1fr;
+        column-gap: 40px;
+    }
+
+    .editor__template {
+        grid-column: 2 / 3;
+        justify-self: center;
+    }
+
+    .cabecalho__menu {
+        position: static;
+        grid-column: 1 / 2;
+    }
+    
+}

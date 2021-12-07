@@ -1,0 +1,51 @@
+@media screen and (min-width: 0) {
+    .formulario__personalizacao, .formulario__projeto {
+        margin-top: 40px;
+    }
+
+    .formulario__botao {
+        background: #5081FB;
+        color: #051D3B;
+        font-weight: 500;
+    }
+
+    .formulario__botao:hover {
+        background: #7BA4FC;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .formulario__personalizacao {
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo"
+        "select color";
+        column-gap: 16px;
+    }
+
+    .formulario__personalizacao .titulo {
+        grid-area: titulo;
+    }
+
+    .select {
+        grid-area: select;
+    }
+
+    input[type="color"] {
+        grid-area: color;
+        margin-top: 16px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .formulario__projeto {
+        margin-top: 0;
+    }
+
+    .formulario__personalizacao {
+        grid-template-areas: 
+        "titulo"
+        "select"
+        "color";
+    }
+}
