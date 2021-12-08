@@ -9,18 +9,21 @@
 
     .cabecalho__logo img {
         display: block;
+        cursor: pointer;
     }
 
     .cabecalho__botao {
         background-color: transparent;
         border: none;
-        width: 20px;
-        height: 20px;
+        width: 48px;
+        height: 48px;
         cursor: pointer;
+        border-radius: 16px;
+        transition: 0.2s ease-in all;
     }
 
     .cabecalho__botao--lupa {
-        background: url(../img/lupa.svg) no-repeat center / contain;
+        background: url(../img/lupa.svg) no-repeat center;
     }
 
     .cabecalho__botao--lupa-inativo {
@@ -28,9 +31,15 @@
     }
 
     .cabecalho__botao--menu {
-        background: url(../img/menu.svg) no-repeat center / contain;
+        background: url(../img/menu.svg) no-repeat center;
+
         margin-left: 36px;
         margin-right: 14px;
+
+    }
+
+    .cabecalho__botao:hover {
+        background-color: rgba(80, 129, 251, 0.08);
     }
 
     .cabecalho__botao--menu-ativo {
@@ -56,7 +65,7 @@
         z-index: 2;
         left: 14px;
         top: 28px;
-        max-width: calc(100vw - 88px);
+        max-width: calc(100vw - 108px);
         animation: aparecer .2s ease-in forwards;
     }
 
@@ -112,12 +121,19 @@
         left: -16px;
         width: 48px;
         height: 48px;
-        background-image: url(../../assets/img/editor-icon.svg);
+        background: url(../../assets/img/editor-icon.svg) no-repeat center #5081FB;
+        border-radius: 16px;
+        transition: 0.8s ease-out all;
     }
 
     .cabecalho__menu-item--comunidade .cabecalho__menu-link::before {
-        background-image: url(../../assets/img/comunidade-icon.svg);
-        opacity: 24%;
+        background: url(../../assets/img/comunidade-icon.svg) no-repeat center rgba(80, 129, 251, 0.32);
+        opacity: 0.48;
+    }
+
+    .cabecalho__menu-link:hover::before {
+        background-color: rgba(80, 129, 251, 0.72);
+        opacity: 0.8;
     }
 
     .cabecalho__menu-item:last-child .cabecalho__menu-link {
@@ -130,10 +146,24 @@
         align-items: center;
         padding: 0 12px;
         margin: 24px;
+        height: 56px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        transition: .3s ease-in all;
+        cursor: pointer;
+    }
+
+    .cabecalho__user:hover {
+        background-color: rgba(80, 129, 251, 0.08);
     }
 
     .cabecalho__user--principal {
+        margin-right: 0;
         display: none;
+    }
+
+    .cabecalho__user--principal:hover {
+        background-color: #192F4B;
     }
 
     .cabecalho__username {
@@ -146,7 +176,7 @@
 
 @media screen and (min-width: 768px) {
     .cabecalho {
-        padding: 32px;
+        padding: 12px 32px;
         grid-template-columns: auto 1fr auto;
         column-gap: 40px;
     }

@@ -32,6 +32,7 @@ body {
     margin-top: 32px;
     cursor: pointer;
     transition: .2s ease-in all;
+    font-weight: 500;
 }
 
 .botao:hover {
@@ -66,6 +67,11 @@ body {
 
 .select {
     cursor: pointer;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    background-image: url(../../assets/img/rightarrow.svg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 14px) 50%;
 }
 
 input[type="color"] {
