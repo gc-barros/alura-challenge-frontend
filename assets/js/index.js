@@ -1,7 +1,10 @@
-import initCabecalho from "./cabecalho.js"
+import initCabecalho from "./cabecalho.js";
+import initCodeEditor from "./codeEditor.js";
+import initChangeColor from "./changeColor.js"
 
 initCabecalho();
-
+initCodeEditor();
+initChangeColor();
 
 // Testes provisórios:
 const highlightButton = document.querySelector('[data-highligth-botao]');

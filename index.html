@@ -48,8 +48,8 @@
             </div>
         </nav>
         <section class="editor">
-            <div class="editor__template">
-                <textarea class="editor__codigo" spellcheck="false">
+            <div class="editor__template" data-background>
+                <pre class="editor__codigo" contenteditable="true" data-editor>
 const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
 
 const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
@@ -60,9 +60,9 @@ const unfold = (f, seed) => {
         return res ? go(f, res[1], acc.concat([res[0]])) : acc
     }
     return go(f, seed, [])
-}</textarea>
+}
+                </pre>
             </div>
-
             <button class="botao editor__botao--highlight" data-highligth-botao>Visualizar com o highlight</button>
         </section>
         
@@ -81,7 +81,7 @@ const unfold = (f, seed) => {
                     <option value="Python">Python</option>
                     <option value="Java">Java</option>
                 </select>
-                <input type="color" name="" id="" class="input" value="#6BD1FF">
+                <input type="color" data-input="color" class="input" value="#6BD1FF">
             </div>
             <button class="botao formulario__botao" data-salvar-botao>Salvar projeto</button>
         </form>

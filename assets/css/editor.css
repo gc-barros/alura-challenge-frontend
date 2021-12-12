@@ -20,7 +20,7 @@
         background-color: #141414;
         color: var(--white);
         resize: vertical;
-        height: 393px;
+        /* height: 393px; */
         width: 100%;
         border-radius: 8px;
         font-family: 'Roboto Mono', monospace;
@@ -29,6 +29,7 @@
         box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
         -moz-tab-size: 4;
         tab-size: 4;
+        line-height: 18px;
     }   
 
     ::-webkit-resizer {
@@ -59,10 +60,6 @@
     .principal {
         padding: 8px 32px;
     }
-
-    .editor__codigo {
-        height: 280px;
-    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -71,10 +68,6 @@
         display: grid;
         grid-template-columns: 20% 48% 24%;
         column-gap: 40px;
-    }
-
-    .editor__codigo {
-        height: 311px;
     }
 
     .editor__template {
